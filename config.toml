@@ -1,0 +1,23 @@
+# U-Net Configuration
+
+# Dataset settings
+dataset_name = "oxford-iiit-pet"
+num_classes = 3  # Background, foreground, border (trimap)
+batch_size = 32
+num_workers = 4
+test_size = 0.1
+val_size = 0.1
+
+# Image settings
+input_size = 572
+output_size = 388
+in_channels = 3  # RGB
+out_channels = 3  # Segmentation classes
+
+# Training settings
+learning_rate = 1e-4
+epochs = 100
+weight_decay = 1e-5
+
+# Model settings
+base_filters = 64  # First conv layer filters, doubles each level
